@@ -1,4 +1,4 @@
-package com.telesens.academy.lesson06home;
+package com.telesens.academy.lesson06home.Enum;
 public class TestClass {
 
     public static void main(String[] args) {

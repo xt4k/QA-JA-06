@@ -1,4 +1,4 @@
-package com.telesens.academy.lesson06home;
+package com.telesens.academy.lesson06home.Enum;
 
 public enum Months {
     JANUARY(31, "WINTER","зима","январь"),
