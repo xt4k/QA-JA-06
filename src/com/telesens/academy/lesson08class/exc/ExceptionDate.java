@@ -11,7 +11,7 @@ public class ExceptionDate {
 
         System.out.println("-----------");
         System.out.println("Current Date is: " + date3.getDate());
-        System.out.println("----реализация метод checkData(int day, int month, int year), который проверяет существование введенной даты----");
+        System.out.println("----реализация метод checkData(day, month, year), который проверяет существование введенной даты----");
 
         System.out.println("positive scenario");
 
@@ -23,31 +23,64 @@ public class ExceptionDate {
 
         System.out.println("negative scenario");
 
-         System.out.println("-");
-        try { System.out.println(" check Date(0,12,2011) " + date3.checkData(new Date(0, 12, 2011))); }
-        catch (IllegalDateException e) {  System.out.println(e.getDetails());  }
-        try { System.out.println(" check Date(-1,12,2011) " + date3.checkData(new Date(-1,12,2011)));               }
-        catch (IllegalDateException e) {System.out.println(e.getDetails());  }
-        try { System.out.println(" check Date(32, 12, 2011) " + date3.checkData(new Date(32, 12, 2011))); }
-        catch (IllegalDateException e) {  System.out.println(e.getDetails());  }
-
-        try { System.out.println(" check Date(21, 0, 2011) " + date3.checkData(new Date(21, 0, 2011)));               }
-        catch (IllegalDateException e) {System.out.println(e.getDetails());  }
-        try { System.out.println(" check Date(31, 1, 1011) " + date3.checkData(new Date(31, 1, 1011))); }
-        catch (IllegalDateException e) {  System.out.println(e.getDetails());  }
-        try { System.out.println(" check Date(23, 12, 3011) " + date3.checkData(new Date(23, 12, 3011)));               }
-        catch (IllegalDateException e) {System.out.println(e.getDetails());  }
         System.out.println("-");
-        try { System.out.println(" check Date(0, 12, 2011) " + date3.checkData(new Date(0, 12, 2011)));               }
-        catch (IllegalDateException e) {System.out.println(e.getDetails());  }
-        try { System.out.println(" check Date(-1, 12, 2011) " + date3.checkData(new Date(-1, 12, 2011))); }
-        catch (IllegalDateException e) {  System.out.println(e.getDetails());  }
-        try { System.out.println(" check Date(0, 06, 1681) " + date3.checkData(new Date(0, 06, 1681)));               }
-        catch (IllegalDateException e) {System.out.println(e.getDetails());  }
-        try { System.out.println(" check Date(21, 0, 2011) " + date3.checkData(new Date(21, 0, 2011))); }
-        catch (IllegalDateException e) {  System.out.println(e.getDetails());  }
-        try { System.out.println(" check Date(21, 13, 2011) " + date3.checkData(new Date(21, 13, 2011)));               }
-        catch (IllegalDateException e) {System.out.println(e.getDetails());  }
+        try {
+            System.out.println(" check Date(0,12,2011) " + date3.checkData(new Date(0, 12, 2011)));
+        } catch (IllegalDateException e) {
+            System.out.println(e.getDetails());
+        }
+        try {
+            System.out.println(" check Date(-1,12,2011) " + date3.checkData(new Date(-1, 12, 2011)));
+        } catch (IllegalDateException e) {
+            System.out.println(e.getDetails());
+        }
+        try {
+            System.out.println(" check Date(32, 12, 2011) " + date3.checkData(new Date(32, 12, 2011)));
+        } catch (IllegalDateException e) {
+            System.out.println(e.getDetails());
+        }
+
+        try {
+            System.out.println(" check Date(21, 0, 2011) " + date3.checkData(new Date(21, 0, 2011)));
+        } catch (IllegalDateException e) {
+            System.out.println(e.getDetails());
+        }
+        try {
+            System.out.println(" check Date(31, 1, 1011) " + date3.checkData(new Date(31, 1, 1011)));
+        } catch (IllegalDateException e) {
+            System.out.println(e.getDetails());
+        }
+        try {
+            System.out.println(" check Date(23, 12, 3011) " + date3.checkData(new Date(23, 12, 3011)));
+        } catch (IllegalDateException e) {
+            System.out.println(e.getDetails());
+        }
+        System.out.println("-");
+        try {
+            System.out.println(" check Date(0, 12, 2011) " + date3.checkData(new Date(0, 12, 2011)));
+        } catch (IllegalDateException e) {
+            System.out.println(e.getDetails());
+        }
+        try {
+            System.out.println(" check Date(-1, 12, 2011) " + date3.checkData(new Date(-1, 12, 2011)));
+        } catch (IllegalDateException e) {
+            System.out.println(e.getDetails());
+        }
+        try {
+            System.out.println(" check Date(0, 06, 1681) " + date3.checkData(new Date(0, 06, 1681)));
+        } catch (IllegalDateException e) {
+            System.out.println(e.getDetails());
+        }
+        try {
+            System.out.println(" check Date(21, 0, 2011) " + date3.checkData(new Date(21, 0, 2011)));
+        } catch (IllegalDateException e) {
+            System.out.println(e.getDetails());
+        }
+        try {
+            System.out.println(" check Date(21, 13, 2011) " + date3.checkData(new Date(21, 13, 2011)));
+        } catch (IllegalDateException e) {
+            System.out.println(e.getDetails());
+        }
         System.out.println("========");
 
     }
