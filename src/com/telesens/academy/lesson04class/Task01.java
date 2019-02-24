@@ -1,9 +1,11 @@
 package com.telesens.academy.lesson04class;
 
+import com.telesens.academy.lesson08class.exc.ParseAbonentException;
+
 public class Task01 {
     private Subscriber abonent;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
       String abonentRawString = " helen iVanova 35 f 0501234567";
     /*   String fName = parseFname(abonentRawString);
        String lName = parseLname(abonentRawString);
@@ -36,25 +38,32 @@ public class Task01 {
 
     }
 
-    private static String parsePNumber(String string) {
+    public static String parsePNumber(String string) {
         String[] resultString = string.trim().split(" ");
         String num= (resultString[4]);
         return num;
     }
 
-    private static char parseGender(String string) {
+    public static char parseGender(String string) throws ParseAbonentException{
         String[] resultString = string.trim().split(" ");
         char gender=resultString[3].charAt(0);
+        String wrongGender = String.valueOf(gender).toLowerCase();
+        if (!(wrongGender.equals("f")||wrongGender.equals("m"))) {
+            ParseAbonentException parseAbonentException =  new ParseAbonentException("wrong gender");
+            //System.out.println("wrong gender");
+            throw parseAbonentException;
+        }
+
         return gender;
     }
 
-    private static int parseAge(String string) {
+    public static int parseAge(String string) {
         String[] resultString = string.trim().split(" ");
         int age=Integer.parseInt(resultString[2]);
         return age;
     }
 
-    private static String parseLname(String string) {
+    public static String parseLname(String string) {
         String[] resultString = string.trim().split(" ");
         String name = resultString[1];
         name.replaceAll("[0-9]","").split(" ");
@@ -63,11 +72,10 @@ public class Task01 {
         return name;
     }
 
-    private static String parseFname(String string) {
+    public static String parseFname (String string) throws Exception {
         String[] resultString = string.trim().split(" ");
-        String name=resultString[0].toLowerCase();
+        String name = resultString[0].toLowerCase();
         name = name.substring(0, 1).toUpperCase() + name.substring(1);
         return name;
     }
-
 }

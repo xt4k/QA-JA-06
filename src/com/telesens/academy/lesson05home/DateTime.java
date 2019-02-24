@@ -1,9 +1,6 @@
 package com.telesens.academy.lesson05home;
 
 public class DateTime extends Date {
-    private int day;
-    private int month;
-    private int year;
     private int hours;
     private int minutes;
     private int seconds;
@@ -24,11 +21,14 @@ public class DateTime extends Date {
 
     public DateTime() {
         super();
+        this.hours =0;
+        this.minutes=0;
+        this.seconds=0;
     }
 
     public String getDateTime() {
         String string = super.getDate();
-        string = string +". ToDayTime is: " + toString();
+        string = string +". DayTime is: " + this.toString();
                 //Integer.parseInt(this.hours) + Integer.parseInt(this.minutes) + Integer.parseInt(this.seconds);
         return string;
     }
@@ -80,6 +80,67 @@ public class DateTime extends Date {
         String dateTimeFormat = String.format(", DateTime is %02d:%02d:%02d",this.hours,this.minutes,this.seconds);
         return dateFormat+ dateTimeFormat ;
     }
+
+    public String checkTime (DateTime dayTime) {
+        if ((hours<0)||(hours>23))
+            return "Hours definition error: "+ hours;
+        if ((minutes<0)||(minutes>59))
+            return "Minutes definition error: "+ minutes;
+        if ((seconds<0)||(seconds>59))
+            return "Seconds definition error: "+ seconds;
+        return "Correct date.";
+    }
+
+    public void nextHour(){
+        this.hours++;
+        if (this.hours==24) {
+            super.nextDay();
+            hours=0;
+        }
+    }
+    public void nextMinutes(){
+        this.minutes++;
+        if (this.minutes==60) {
+            this.nextHour();
+            minutes=0;
+        }
+    }
+    public void nextSeconds() {
+        this.seconds++;
+        if (this.seconds == 60) {
+            this.nextMinutes();
+            seconds = 0;
+        }
+    }
+
+    public void addSeconds(int addedSec) {
+        this.seconds = +addedSec;
+    }
+
+    public void printTime () {
+        System.out.println(String.format(" %02d:%02d:%02d",this.hours,this.minutes,this.seconds));
+    }
+
+    public void printTime (boolean isTimeFormat12) {
+        if (!isTimeFormat12) this.printTime();
+        else {
+            this.hours = this.hours%12;
+            System.out.println(String.format(" %02d:%02d:%02d pm",this.hours,this.minutes,this.seconds));
+        }
+    }
+    public void printDateTime () {
+        super.printDate();
+        this.printTime();
+    }
+
+    public void printDateTime (boolean is12hFormat) {
+        super.printDate();
+        if (is12hFormat)
+        this.printTime(true);
+        else  this.printTime(false);
+    }
+
+
 
 
 }

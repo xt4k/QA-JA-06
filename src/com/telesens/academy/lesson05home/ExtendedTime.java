@@ -9,6 +9,11 @@ public class ExtendedTime extends DateTime {//1c-0
     private int extSec;
     private int mS;
 
+    ExtendedTime( int mS) {
+        super(2,1,1970,0, 0, 0);
+        this.mS = 1;
+    }
+
     ExtendedTime(int extDay, int extMonth, int extYear, int extHour, int extMin, int extSec, int mS) {
         super(extDay, extMonth, extYear, extHour, extMin, extSec);
         this.mS = mS;
@@ -27,6 +32,10 @@ public class ExtendedTime extends DateTime {//1c-0
         String extTodayDateTime = String.format(super.toString()+ " ExtendedTime is: %03d", this.mS);
         return extTodayDateTime;
     }
+
+
+
+
 
     public int getExtDay() {
         return extDay;
@@ -57,7 +66,7 @@ public class ExtendedTime extends DateTime {//1c-0
     }
 
     public void setExtHour(int extHour) {
-        this.extHour = extHour;
+        super.setHours(extHour);
     }
 
     public int getExtMin() {
@@ -75,8 +84,10 @@ public class ExtendedTime extends DateTime {//1c-0
     public void setExtSec(int extSec) {
         this.extSec = extSec;
     }
-    public void setExtDateTime(int hours,int minutes, int seconds) {
+
+    public void setExtDateTime(int hours,int minutes, int seconds, int mS) {
         super.setDateTime(hours,minutes,seconds);
+        this.mS = mS;
     }
 
     public boolean setFullDateTime(int day, int month, int year, int hours, int minutes, int seconds, int mS) {
@@ -86,6 +97,9 @@ public class ExtendedTime extends DateTime {//1c-0
     }
 
     public void print() {
+        super.printDateTime();
         System.out.println(this);
     }
+
+
 }
