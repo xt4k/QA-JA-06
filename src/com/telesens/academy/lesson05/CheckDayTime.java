@@ -1,6 +1,5 @@
-package com.telesens.academy.lesson05home;
+package com.telesens.academy.lesson05;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
 import com.telesens.academy.lesson08class.exc.IllegalDateException;
 
 public class CheckDayTime {
