@@ -1,5 +1,5 @@
 package com.telesens.academy.lesson08class.exc;
-import static com.telesens.academy.lesson04class.Task01.*;
+import static com.telesens.academy.lesson04.Task01.*;
 
 public class FullAbonParse {
     private String fName;

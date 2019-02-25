@@ -1,6 +1,4 @@
 package com.telesens.academy.lesson08class.exc;
-import static com.telesens.academy.lesson04class.Task01.parseFname;
-import static com.telesens.academy.lesson04class.Task01.parseLname;
 
 public class ExceptionDemo {
     public static void main(String[] args) throws Exception {
