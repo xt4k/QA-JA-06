@@ -1,6 +1,6 @@
 package com.telesens.academy.lesson08class.exc;
 
-import com.telesens.academy.lesson05home.Date;
+import com.telesens.academy.lesson05.Date;
 
 public class ExceptionDate {
     public static void main(String[] args) throws IllegalDateException {
@@ -82,6 +82,5 @@ public class ExceptionDate {
             System.out.println(e.getDetails());
         }
         System.out.println("========");
-
     }
 }
