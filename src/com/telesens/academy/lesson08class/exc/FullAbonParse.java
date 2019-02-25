@@ -1,4 +1,5 @@
 package com.telesens.academy.lesson08class.exc;
+
 import static com.telesens.academy.lesson04.Task01.*;
 
 public class FullAbonParse {
@@ -14,7 +15,7 @@ public class FullAbonParse {
         this.setAge(parseAge(abonentRawString));
         this.setGender(parseGender(abonentRawString));
         this.setpNumber(parsePNumber(abonentRawString));
-        String string = String.format("Abon::\nName: %s \nLastName: %s \nAge: %s \nGender: %s \nPhoneNUmber: %s",this.getfName(),this.getlName(),this.getAge(),this.getGender(),this.getpNumber());
+        String string = String.format("Abon::\nName: %s \nLastName: %s \nAge: %s \nGender: %s \nPhoneNUmber: %s", this.getfName(), this.getlName(), this.getAge(), this.getGender(), this.getpNumber());
         System.out.println(string);
         //return string;
     }
