@@ -11,9 +11,8 @@ public class ExceptionDate {
 
         System.out.println("-----------");
         System.out.println("Current Date is: " + date3.getDate());
-        System.out.println("----реализация метод checkData(day, month, year), который проверяет существование введенной даты----");
-
-        System.out.println("positive scenario");
+        System.out.println("Тест работы конструктора классa Date c выбрасываниeм исключения IllegalDateException");
+         System.out.println("positive scenario (тест работы конструктора на позитивных кейсах)");
 
         System.out.println("check Date(11,12,2011)" + date3.checkData(new Date(11, 12, 2011)));
         System.out.println("check Date(17, 2, 2019)" + date3.checkData(new Date(17, 2, 2019)));
@@ -21,7 +20,7 @@ public class ExceptionDate {
         System.out.println("check Date(31, 1, 1999)" + date3.checkData(new Date(31, 1, 1999)));
         System.out.println("check Date(13, 6, 1681)" + date3.checkData(new Date(13, 6, 1681)));
 
-        System.out.println("negative scenario");
+        System.out.println("negative scenario  (попытка создать некорректную (не существующую дату))");
 
         System.out.println("-");
         try {

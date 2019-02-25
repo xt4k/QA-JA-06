@@ -1,5 +1,7 @@
 package com.telesens.academy.lesson05;
 
+import com.telesens.academy.lesson08class.exc.IllegalTimeException;
+
 public class DateTime extends Date {
     private int hours;
     private int minutes;
@@ -81,14 +83,15 @@ public class DateTime extends Date {
         return dateFormat+ dateTimeFormat ;
     }
 
-    public String checkTime (DateTime dayTime) {
-        if ((hours<0)||(hours>23))
-            return "Hours definition error: "+ hours;
-        if ((minutes<0)||(minutes>59))
-            return "Minutes definition error: "+ minutes;
-        if ((seconds<0)||(seconds>59))
-            return "Seconds definition error: "+ seconds;
-        return "Correct date.";
+    public String checkTime (DateTime dayTime) throws IllegalTimeException {
+        if (dayTime.getHours()<0)  throw new IllegalTimeException("Hours number lower than 0: ",dayTime.getHours());
+        if (dayTime.getHours()>23)  throw new IllegalTimeException("Hours number exceeded 23: ",dayTime.getHours());
+        if (dayTime.getMinutes()<0)  throw new IllegalTimeException("Minutes  number lower than 0: ",dayTime.getMinutes());
+        if (dayTime.getMinutes()>59)  throw new IllegalTimeException("Minutes number exceeded 59: ",dayTime.getMinutes());
+        if (dayTime.getSeconds()<0)  throw new IllegalTimeException("Minutes  number lower than 0: ",dayTime.getSeconds());
+        if (dayTime.getSeconds()>59)  throw new IllegalTimeException("Minutes number exceeded 59: ",dayTime.getSeconds());
+
+        return "Correct DayTime.";
     }
 
     public void nextHour(){
