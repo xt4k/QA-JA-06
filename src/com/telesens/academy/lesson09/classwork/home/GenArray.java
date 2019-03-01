@@ -1,34 +1,52 @@
 package com.telesens.academy.lesson09.classwork.home;
 
-import java.util.Objects;
+import java.util.Arrays;
 
 public class GenArray <T> {
-    private T element;
+    private T[] array;
+    private int lenght;
 
-    public T getElement() throws ExceededArrayBoundException {
-        return element;
+    private boolean checkIndex(int i) {
+        if (i >= this.lenght||i<0) {
+            new ArrayIndexOutOfBoundsException("wrong index for Array element", i);
+            System.exit(1);
+        }
+        return true;
     }
 
-    public void setElement(T element) throws ExceededArrayBoundException {
-        this.element = element;
+    public GenArray(T[] array) {
+        this.array = array;
+        this.lenght = array.length;
     }
 
-    @Override
-    public String toString() {
-        for (int i=0;i<T
+    public T get(int index) {
+        checkIndex(index);
+        return array[index];
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        GenArray<?> genArray = (GenArray<?>) o;
-        return Objects.equals(element, genArray.element);
+    public void set(int index, T value)  {
+        checkIndex(index);
+        array[index] = value;
     }
 
-    @Override
-    public int hashCode() {
-
-        return Objects.hash(element);
+    public void setArray(T[] array)  {
+        this.array = array;
     }
+
+
+        @Override
+        public String toString () {
+            return Arrays.toString(array);
+        }
+
+        @Override
+        public boolean equals (Object o){
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            GenArray<?> genArray = (GenArray<?>) o;
+            return Arrays.equals(array, genArray.array);
+        }
+
+
 }
+
