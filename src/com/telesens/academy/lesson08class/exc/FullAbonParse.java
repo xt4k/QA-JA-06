@@ -1,5 +1,8 @@
 package com.telesens.academy.lesson08class.exc;
 
+import com.telesens.academy.lesson04.Subscriber;
+import org.omg.PortableInterceptor.SUCCESSFUL;
+
 import static com.telesens.academy.lesson04.Task01.*;
 
 public class FullAbonParse {
@@ -8,6 +11,7 @@ public class FullAbonParse {
     private int age;
     private char gender;
     private String pNumber;
+    private Subscriber abonentParsed;
 
     public FullAbonParse(String abonentRawString) throws Exception {
         this.setfName(parseFname(abonentRawString));
@@ -17,7 +21,13 @@ public class FullAbonParse {
         this.setpNumber(parsePNumber(abonentRawString));
         String string = String.format("Abon::\nName: %s \nLastName: %s \nAge: %s \nGender: %s \nPhoneNUmber: %s", this.getfName(), this.getlName(), this.getAge(), this.getGender(), this.getpNumber());
         System.out.println(string);
+        Subscriber abonentParsed = new Subscriber(getfName(),getlName(), getAge(), getGender(), getpNumber());
+        this.abonentParsed = abonentParsed;
         //return string;
+    }
+
+    public Subscriber getParsedPerson() {
+        return abonentParsed;
     }
 
     public String getfName() {

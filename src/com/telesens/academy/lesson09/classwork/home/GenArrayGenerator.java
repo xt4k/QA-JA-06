@@ -13,9 +13,9 @@ public class GenArrayGenerator {
         for (int i = 0; i < arrBigInt.length; i++) {
             arrBigInt[i] = generateNextNumber.getBigIntRandom();
             genArray.set(i,arrBigInt[i]);
-            System.out.print("arrBigInt["+i+"]"+arrBigInt[i]);
+            System.out.println("arrBigInt["+i+"] "+arrBigInt[i]);
         }
-        System.out.println("genArray:"+genArray.getArray());
+        System.out.println("genArray: "+genArray.getArray());
 
     }
 }

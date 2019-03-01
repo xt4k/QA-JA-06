@@ -19,6 +19,10 @@ public class Subscriber { //String abonentRawString = " helen iVanova 35 f 05012
         this.pNumber = pNumber;
     }
 
+    public Subscriber(String parsedPerson) {
+
+    }
+
     public void setfName(String fName) {
         this.fName = fName;
     }

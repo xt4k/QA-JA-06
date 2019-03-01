@@ -48,8 +48,9 @@ public class GenArray <T> {
         }
 
 
-    public T[] getArray() {
-        return array;
+    public String getArray() {
+        String arrAsStr = Arrays.toString(array);
+        return arrAsStr;
     }
 }
 
