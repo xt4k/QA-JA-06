@@ -48,5 +48,8 @@ public class GenArray <T> {
         }
 
 
+    public T[] getArray() {
+        return array;
+    }
 }
 

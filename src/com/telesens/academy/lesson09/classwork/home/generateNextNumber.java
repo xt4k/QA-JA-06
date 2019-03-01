@@ -1,25 +1,28 @@
 package com.telesens.academy.lesson09.classwork.home;
+
 import java.math.BigInteger;
 import java.util.Random;
 
-public class generateNextNumber {
-    private int number;
-    private Random random = new Random();
-    private String string ="999";
-    private String strNum;
+public class GenerateNextNumber {
+    private BigInteger bIntRandom;
 
-    public int getNumber() {
+    public BigInteger getBigIntRandom() {
+        String initialStr ="999";
+        String finalStr_zero="0";
+        String finalStr_five="5";
 
-       // System.out.println("BigInteger_MAX"+BigInteger.MAX_VALUE);
-
-        for (int i=0;i<=7;i++){
-            strNum = strNum +  String.valueOf(random.nextInt(10));
-
+        Random random = new Random();
+        int randomNum = random.nextInt(9999999);
+        String strRandom = String.valueOf(randomNum);
+        while (strRandom.length()<7) {
+            strRandom="0"+strRandom;
+            System.out.println("strRandom "+strRandom);
         }
-       // BigInteger min = 9990000000;
-       // long max = 9999999995;
-        int randomNum = random.nextInt(10);
 
-        return number;
+        if (randomNum%2==0)
+        bIntRandom = new BigInteger(initialStr+strRandom+finalStr_zero);
+        else bIntRandom = new BigInteger(initialStr+strRandom+finalStr_five);
+
+        return bIntRandom;
     }
 }
