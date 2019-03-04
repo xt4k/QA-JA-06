@@ -50,7 +50,7 @@ public class CollectionDemo {
         Set <Subscriber> abonSet2 = new HashSet<>( abonentList2 );
         System.out.println(abonSet.equals(abonSet2));
 
-        System.out.println("===== The_End. =====");
+        System.out.println("======= The_End. ========");
     }
 
     private static Subscriber[] parseAbonents(String[] abonentRawArray) throws Exception {
