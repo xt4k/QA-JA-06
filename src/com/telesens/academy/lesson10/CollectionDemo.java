@@ -53,7 +53,7 @@ public class CollectionDemo {
 
 
 
-        System.out.println("=== the end ===");
+        System.out.println("==== The_End. ====");
     }
 
     private static Subscriber[] parseAbonents(String[] abonentRawArray) throws Exception {
@@ -65,4 +65,5 @@ public class CollectionDemo {
         }
         return abonents;
     }
+
 }
