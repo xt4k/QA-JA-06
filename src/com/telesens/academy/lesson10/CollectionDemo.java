@@ -1,13 +1,10 @@
 package com.telesens.academy.lesson10;
 
 import com.telesens.academy.lesson04.Subscriber;
-import com.telesens.academy.lesson08class.exc.FullAbonParse;
-import com.telesens.academy.lesson09.classwork.home.GenArray;
+import com.telesens.academy.lesson08.exc.FullAbonParse;
+import com.telesens.academy.lesson09.home.GenArray;
 
-import java.lang.reflect.Array;
 import java.util.*;
-
-import static com.telesens.academy.lesson04.Task01.parseFname;
 
 public class CollectionDemo {
     public static void main(String[] args) throws Exception {
