@@ -1,6 +1,6 @@
 package com.telesens.academy.lesson05;
 
-import com.telesens.academy.lesson08class.exc.IllegalDateException;
+import com.telesens.academy.lesson08.exc.IllegalDateException;
 
 public class CheckDayTime {
     public CheckDayTime(Date date) throws IllegalDateException {

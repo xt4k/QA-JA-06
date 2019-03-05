@@ -1,6 +1,6 @@
 package com.telesens.academy.lesson04;
 
-import com.telesens.academy.lesson08class.exc.ParseAbonentException;
+import com.telesens.academy.lesson08.exc.ParseAbonentException;
 
 public class Task01 {
     private Subscriber abonent;

@@ -1,6 +1,6 @@
 package com.telesens.academy.lesson05;
 
-import com.telesens.academy.lesson08class.exc.IllegalTimeException;
+import com.telesens.academy.lesson08.exc.IllegalTimeException;
 
 public class DateTime extends Date {
     private int hours;
