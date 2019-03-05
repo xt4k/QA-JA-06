@@ -80,7 +80,7 @@ public class SubscribersExtDemo {
                 FileReader fileReader = new FileReader( subscribersExtDataPATH );
                 BufferedReader bufferedReader = new BufferedReader( fileReader );
 
-                while ((bufferedReader.readLine()!==null)){
+                while ((bufferedReader.readLine()!=null)){
                 }
                 }
 
