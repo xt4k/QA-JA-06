@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class GenArrayTests {
 
-    public static void main(String[] args)  throws ArrayIndexOutOfBoundsException {
+    public static void main(String[] args)  throws ArrayIndexOutOfBoundsException{
 
         int size = 10;
         Random random = new Random();

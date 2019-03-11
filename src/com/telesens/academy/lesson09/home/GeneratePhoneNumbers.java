@@ -3,7 +3,7 @@ package com.telesens.academy.lesson09.home;
 import java.math.BigInteger;
 import java.util.Random;
 
-public class GenerateNextNumber {
+class GenerateNextNumber {
     private BigInteger bIntRandom;
 
     public BigInteger getBigIntRandom() {

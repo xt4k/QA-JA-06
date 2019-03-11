@@ -8,7 +8,7 @@ public class GenArray <T> {
 
     private boolean checkIndex(int i) {
         if (i >= this.lenght||i<0) {
-            new ArrayIndexOutOfBoundsException("wrong index for Array element", i);
+            new com.telesens.academy.lesson09.home.ArrayIndexOutOfBoundsException("wrong index for Array element", i);
             System.exit(1);
         }
         return true;

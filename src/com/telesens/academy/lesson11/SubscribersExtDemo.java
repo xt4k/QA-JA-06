@@ -75,20 +75,15 @@ public class SubscribersExtDemo {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-
             try {
                 FileReader fileReader = new FileReader( subscribersExtDataPATH );
                 BufferedReader bufferedReader = new BufferedReader( fileReader );
 
                 while ((bufferedReader.readLine()!=null)){
                 }
-                }
-
 
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-
-
         }
 }
