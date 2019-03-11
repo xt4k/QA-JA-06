@@ -1,6 +1,4 @@
-package com.telesens.academy.lesson09.classwork.Containers;
-
-import com.telesens.academy.lesson09.classwork.Containers.PairedContainer;
+package com.telesens.academy.lesson09.Containers;
 
 import java.util.Random;
 

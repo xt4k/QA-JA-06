@@ -1,4 +1,4 @@
-package com.telesens.academy.lesson09.classwork.Containers;
+package com.telesens.academy.lesson09.Containers;
 
 public class Container<S> {
     private  Object element;

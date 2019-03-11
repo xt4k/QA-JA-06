@@ -1,4 +1,4 @@
-package com.telesens.academy.lesson09.classwork.home;
+package com.telesens.academy.lesson09.home;
 
 public class ArrayIndexOutOfBoundsException extends ExceededArrayBoundException {
     private String details;

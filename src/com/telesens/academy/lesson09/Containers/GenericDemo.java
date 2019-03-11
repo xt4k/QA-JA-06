@@ -1,8 +1,4 @@
-package com.telesens.academy.lesson09.classwork.Containers;
-
-import com.telesens.academy.lesson09.classwork.Containers.Container;
-
-import java.lang.reflect.Array;
+package com.telesens.academy.lesson09.Containers;
 
 public class GenericDemo {
     public static void main(String[] args) {

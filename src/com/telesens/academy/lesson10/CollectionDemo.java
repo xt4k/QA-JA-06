@@ -1,7 +1,7 @@
 package com.telesens.academy.lesson10;
 
 import com.telesens.academy.lesson04.Subscriber;
-import com.telesens.academy.lesson08.exc.FullAbonParse;
+import com.telesens.academy.lesson08class.exc.FullAbonParse;
 import com.telesens.academy.lesson09.home.GenArray;
 
 import java.util.*;

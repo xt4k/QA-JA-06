@@ -1,10 +1,10 @@
-package com.telesens.academy.lesson09.classwork.home;
+package com.telesens.academy.lesson09.home;
 
 import java.util.Random;
 
 public class GenArrayTests {
 
-    public static void main(String[] args)  throws ArrayIndexOutOfBoundsException{
+    public static void main(String[] args)  throws com.telesens.academy.lesson09.home.ArrayIndexOutOfBoundsException {
 
         int size = 10;
         Random random = new Random();

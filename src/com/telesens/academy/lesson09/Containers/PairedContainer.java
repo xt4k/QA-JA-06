@@ -1,4 +1,4 @@
-package com.telesens.academy.lesson09.classwork.Containers;
+package com.telesens.academy.lesson09.Containers;
 
 import java.lang.reflect.Array;
 
