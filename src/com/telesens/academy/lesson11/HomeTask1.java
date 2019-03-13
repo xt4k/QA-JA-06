@@ -19,24 +19,13 @@ public class HomeTask1 {
         FillArrayListsFromFiles arrayListFemaleFirstNames = new FillArrayListsFromFiles( readPropFile.getPathF_FirstNames() );
         FillArrayListsFromFiles arrayListFemaleLastNames = new FillArrayListsFromFiles( readPropFile.getPathF_LastNames() );
 
-  /*      System.out.println( "~~~" );
-        System.out.println( arrayListMaleFirstNames.getArrayList() );
-        System.out.println();
-        System.out.println( arrayListMaleLastNames.getArrayList() );
-        System.out.println();
-        System.out.println( arrayListFemaleFirstNames.getArrayList() );
-        System.out.println( arrayListFemaleLastNames.getArrayList() );
-        System.out.println( "~~~" );
-*/
         NamesCollections namesCollections = new NamesCollections(
                 arrayListMaleFirstNames.getArrayList(),
                 arrayListMaleLastNames.getArrayList(),
                 arrayListFemaleFirstNames.getArrayList(),
                 arrayListFemaleLastNames.getArrayList() );
 
-        System.out.println( "++" );
         System.out.println("namesCollections:"+namesCollections);
-
 
 //        a) Наполнить таблицу абонентов excel(200 строк):
 //        - имена фамилии взять в соответстсвующих файлах (см. 'java-part.properties') со списком имен/фамилий (женских/мужских);
@@ -46,8 +35,8 @@ public class HomeTask1 {
 
         SubscriberConstructor subscriberConstructor = new SubscriberConstructor(namesCollections,200 );
 
+        System.out.println( "++" );
 
-//
 //        b)  Телефонные номера для каждого оператора со следующими префиксами:
 //        - Life номера с префиксами: 38063*******, 38093*******, 38073*******
 //        - Kievstar номера с префиксами: 38097*******, 38067*******, 38098*******

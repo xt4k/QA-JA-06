@@ -8,6 +8,7 @@ public class SubscriberExt {
 
 	private int age;
 	private String phoneNumber;
+
 	private Operator operator;
 
     public Long getId() {

@@ -8,12 +8,12 @@ public class SubscriberConstructor {
     private ArrayList <SubscriberExt> arrayListSubsExt;
 
     public SubscriberConstructor(NamesCollections file, int subsNumbers) {
+        arrayListSubsExt = new ArrayList<>(  );
+        SubscriberExt currentSubscriberExt = new SubscriberExt();
         for (int i=0;i<subsNumbers;i++)
         {
-            SubscriberExt currentSubscriberExt = null;
 
-           // currentSubscriberExt.setId( Integer.toUnsignedLong( i ) );
-
+           currentSubscriberExt.setId( Integer.toUnsignedLong( i ) );
             Random random = new Random();
             int randomNum = random.nextInt(file.getArListMaleFirstName().size());
             //System.out.println("file.getArListMaleFirstName().size() "+file.getArListMaleFirstName().size());
@@ -34,10 +34,6 @@ public class SubscriberConstructor {
             randomNum = random.nextInt(file.getArListFemaleLastNames().size());
             currentSubscriberExt.setLastName( file.getArListFemaleLastNames(randomNum) );
 
-
-
-
-
             String strRandom = String.valueOf(randomNum);
             while (strRandom.length()<7) {
                 strRandom="0"+strRandom;
@@ -46,7 +42,7 @@ public class SubscriberConstructor {
 
 
 
-           // arrayListSubsExt.add( currentSubscriberExt  );
+           arrayListSubsExt.add( currentSubscriberExt  );
 
         }
 
