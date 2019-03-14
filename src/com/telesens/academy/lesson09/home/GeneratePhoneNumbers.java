@@ -6,6 +6,21 @@ import java.util.Random;
 class GenerateNextNumber {
     private BigInteger bIntRandom;
 
+    public String getPhoneNumber(String operPrefix) {
+        String countryCode ="38";
+        Random random = new Random();
+        int randomNum = random.nextInt(9999999);
+        String strRandom = String.valueOf(randomNum);
+        while (strRandom.length()<7) {
+            strRandom="0"+strRandom;
+            System.out.println("strRandom "+strRandom);
+        }
+
+        bIntRandom = new BigInteger(countryCode+operPrefix+strRandom);
+        String generatedPhoneNumber = String.valueOf( bIntRandom );
+        return generatedPhoneNumber;
+    }
+
     public BigInteger getBigIntRandom() {
         String initialStr ="999";
         String finalStr_zero="0";

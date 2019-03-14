@@ -18,6 +18,8 @@ public class HomeTask1 {
         FillArrayListsFromFiles arrayListMaleLastNames = new FillArrayListsFromFiles( readPropFile.getPathM_LastNames() );
         FillArrayListsFromFiles arrayListFemaleFirstNames = new FillArrayListsFromFiles( readPropFile.getPathF_FirstNames() );
         FillArrayListsFromFiles arrayListFemaleLastNames = new FillArrayListsFromFiles( readPropFile.getPathF_LastNames() );
+        int minimalAge = readPropFile.getAgeFrom();
+        int maximalAge = readPropFile.getAgeTo();
 
         NamesCollections namesCollections = new NamesCollections(
                 arrayListMaleFirstNames.getArrayList(),
@@ -25,7 +27,7 @@ public class HomeTask1 {
                 arrayListFemaleFirstNames.getArrayList(),
                 arrayListFemaleLastNames.getArrayList() );
 
-        System.out.println("namesCollections:"+namesCollections);
+       // System.out.println("namesCollections: "+namesCollections);
 
 //        a) Наполнить таблицу абонентов excel(200 строк):
 //        - имена фамилии взять в соответстсвующих файлах (см. 'java-part.properties') со списком имен/фамилий (женских/мужских);
@@ -33,7 +35,7 @@ public class HomeTask1 {
 //        (диапазон брать из файла 'java-part.properties')
 
 
-        SubscriberConstructor subscriberConstructor = new SubscriberConstructor(namesCollections,200 );
+        SubscriberConstructor subscriberConstructor = new SubscriberConstructor(namesCollections,200 ,minimalAge,maximalAge);
 
         System.out.println( "++" );
 
